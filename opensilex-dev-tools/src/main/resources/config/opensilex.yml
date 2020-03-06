@@ -1,20 +1,36 @@
-ontologies:
-    baseURI: http://opensilex.dev/
-    baseURIAlias: dev
+opensilex:
+    baseURI:  http://localhost:8666/
+    storageBasePath: /home/opensilex/documents/instance
     sparql:
         rdf4j:
-            serverURI: http://localhost:8667/rdf4j-server/
-            repository: opensilex
-
-file-system: 
-    storageBasePath: /home/boizetal/OpenSilex/phis-ws/documents
-
-big-data:   
-    nosql:
+            serverURI: http://localhost:8080/rdf4j-server/
+            repository: diaphen
+    
+    bigData:
         mongodb:
             host: localhost
-            port: 8668
-            database: opensilex
-
+            port: 27017
+            database: phis
+    
 phisws:
-    infrastructure: opensilex
+    postgreSQL:
+        host: localhost
+        port: 5432
+        database: expe
+        username: opensilex
+        password: azerty
+        
+    ontologyBaseURI: http://www.opensilex.org/
+    vocabulary: http://www.opensilex.org/vocabulary/oeso
+    infrastructure: demo
+    
+    uploadFileServerIP: localhost
+    uploadFileServerUsername: bonnefoj
+    uploadFileServerPassword: pic3.14
+    
+    layerFileServerDirectory: /var/www/html/layers
+    layerFileServerAddress: http://localhost/layers
+    
+    uploadImageServerDirectory: /var/www/html/images
+    imageFileServerDirectory: http://localhost/images
+        
