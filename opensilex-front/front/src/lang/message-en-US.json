@@ -1,5 +1,8 @@
 {
     "component": {
+        "project": {
+            "add": "New project"
+        },
         "common": {
             "yes": "yes",
             "no": "no",
@@ -24,9 +27,9 @@
         },
         "menu": {
             "dashboard": "Dashboard",
-            "data":{
-                "label":"Data",
-                "images":"Images"
+            "data": {
+                "label": "Data",
+                "images": "Images"
             },
             "experiments": "Experiments",
             "installations": "Installations",

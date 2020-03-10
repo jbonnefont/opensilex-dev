@@ -3,9 +3,9 @@ menu:
     label: component.menu.dashboard
     icon: ik-grid
     route: 
-      path: /users
-      component: opensilex-UserView
-      credentials: []  
+      path: /home
+      component: opensilex-DefaultNotFoundComponent
+      credentials: []
   - id: data
     label: component.menu.data.label
     icon: ik-trending-up
@@ -20,61 +20,59 @@ menu:
     label: component.menu.experiments
     icon: ik-layers
     route: 
-      path: /users
-      component: opensilex-UserView
+      path: /experiments
+      component: opensilex-DefaultNotFoundComponent
       credentials: []
-  - id: installations
-    label: component.menu.installations
-    icon: ik-globe
   - id: projects
     label: component.menu.projects
     icon: ik-folder
     route: 
-      path: /users
-      component: opensilex-UserView
+      path: /projects
+      component: opensilex-core-ProjectView
       credentials: []
   - id: scientificObjects
     label: component.menu.scientificObjects
     icon: ik-target
-    route: 
-      path: /users
-      component: opensilex-UserView
-      credentials: []
+
   - id: equipments
     label: component.menu.equipments.label
     icon: ik-aperture
     route: 
-      path: /users
-      component: opensilex-UserView
+      path: /equipements
+      component: opensilex-DefaultNotFoundComponent
       credentials: []
     children:
       - id: sensors
         label: component.menu.equipments.sensors
         route: 
-          path: /users
-          component: opensilex-UserView
+          path: /sensors
+          component: opensilex-DefaultNotFoundComponent
           credentials: []
       - id: actuators
         label: component.menu.equipments.actuators
         route: 
-          path: /users
-          component: opensilex-UserView
+          path: /actuators
+          component: opensilex-DefaultNotFoundComponent
           credentials: []
       - id: vectors
         label: component.menu.equipments.vectors
         route: 
-          path: /users
-          component: opensilex-UserView
+          path: /vectors
+          component: opensilex-DefaultNotFoundComponent
           credentials: []
       - id: radiometricTargets
         label: component.menu.equipments.radiometricTargets
         route: 
-          path: /users
-          component: opensilex-UserView
+          path: /radiometricTargets
+          component: opensilex-DefaultNotFoundComponent
           credentials: []
   - id: security
     label: component.menu.security.label
     icon: ik-lock
+    route: 
+      path: /security
+      component: opensilex-DefaultNotFoundComponent
+      credentials: []
     children:
       - id: users
         label: component.menu.security.users

@@ -1,5 +1,8 @@
 {
     "component": {
+        "project":{
+            "add":"Nouveau projet"
+        },
         "common": {
             "yes": "oui",
             "no": "non",
