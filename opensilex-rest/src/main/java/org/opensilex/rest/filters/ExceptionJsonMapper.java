@@ -6,8 +6,6 @@
 //******************************************************************************
 package org.opensilex.rest.filters;
 
-import java.net.URI;
-import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.Response;
@@ -53,7 +51,7 @@ public class ExceptionJsonMapper implements ExceptionMapper<Throwable> {
         } else {
             response = new ErrorResponse(exception).getResponse();
         }
-        LOGGER.error("Exception returned to user service call: " + uriInfo.getAbsolutePath().toString(), exception);
+        LOGGER.error("Exception returned to user service call: \n" + uriInfo.getAbsolutePath().toString(), exception);
         return response;
     }
 

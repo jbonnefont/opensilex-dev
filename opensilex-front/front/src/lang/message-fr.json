@@ -1,6 +1,49 @@
 {
     "component": {
         "common": {
+            "datePicker": {
+                "dayNames": {
+                    "sunday": "Dim",
+                    "monday": "Lun",
+                    "tuesday": "Mar",
+                    "wednesday": "Mer",
+                    "thursday": "Jeu",
+                    "friday": "Ven",
+                    "saturday": "Sam"
+                },
+                "monthNames": {
+                    "january": "Janvier",
+                    "february": "Février",         
+                    "march": "Mars",   
+                    "april": "Avril",
+                    "may": "Mai",
+                    "june": "Juin",
+                    "july": "Jullet",
+                    "august": "Aout",  
+                    "september": "Septembre",
+                    "october": "Octobre",
+                    "november": "Novembre",
+                    "december": "Decembre"
+                },
+                "dayShortNames": {
+                    "sun": "Dim",
+                    "mon": "Lun",
+                    "tue": "Mar",
+                    "wed": "Mer",
+                    "thu": "Jeu",
+                    "fri": "Ven",
+                    "sat": "Sam"
+                },
+                "texts": {
+                    "apply": "Appliquer",
+                    "cancel": "Annuler"
+                }
+            },
+            "multiselect": {
+                "label": {
+                    "x-more": "et {count} de plus"
+                }
+            },
             "yes": "oui",
             "no": "non",
             "ok": "OK",
@@ -11,6 +54,45 @@
             "actions": "actions",
             "uri": "URI",
             "logout": "Déconnexion"
+        },
+        "experiment": {
+            "common": {
+                "status": {
+                    "finished": "Terminé",
+                    "in-progress": "En cours",
+                    "public": "Public"
+                }
+            },
+            "search": {
+                "description": "Gérer et configurer les expérimentations",
+                "buttons": {
+                    "add-experiment": "Ajouter Expérimentation"
+                },
+                "column": {
+                    "alias": "Alias",
+                    "projects": "Projet(s)",
+                    "installations": "Installation(s)",
+                    "campaign": "Campagne",
+                    "places": "Lieux",
+                    "species": "Espèces",
+                    "startDate": "Date de début",
+                    "endDate": "Date de fin",
+                    "uri": "URI",
+                    "state": "Etat"
+                },
+                "filter": {
+                    "alias": "Filtrer par Alias",
+                    "campains": "Filtrer par Campagne(s)",
+                    "installations": "Filtrer par Installation(s)",
+                    "projects": "Filtrer par Projet(s)",
+                    "places": "Filtrer par Lieux",
+                    "species": "Filtrer par Espèce(s)",
+                    "startDate": "Filtrer par Date de début",
+                    "endDate": "Filtrer par Date de fin",
+                    "uri": "Filtrer par URI",
+                    "state": "Filtrer par état"
+                }
+            }
         },
         "header": {
             "language": {
@@ -24,9 +106,9 @@
         },
         "menu": {
             "dashboard": "Tableau de bord",
-            "data":{
-                "label":"Données",
-                "images":"Images"
+            "data": {
+                "label": "Données",
+                "images": "Images"
             },
             "experiments": "Expérimentations",
             "installations": "Installations",

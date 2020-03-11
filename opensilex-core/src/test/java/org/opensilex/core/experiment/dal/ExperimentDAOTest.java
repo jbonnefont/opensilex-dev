@@ -15,6 +15,7 @@ import org.opensilex.core.ontology.Oeso;
 import org.opensilex.core.project.dal.ProjectDAO;
 import org.opensilex.core.project.dal.ProjectModel;
 import org.opensilex.sparql.exceptions.SPARQLInvalidURIException;
+import org.opensilex.sparql.mapping.SPARQLClassObjectMapper;
 import org.opensilex.sparql.model.SPARQLResourceModel;
 import org.opensilex.utils.ListWithPagination;
 
@@ -37,21 +38,22 @@ import org.opensilex.rest.RestModule;
 import org.opensilex.sparql.SPARQLModule;
 import org.opensilex.sparql.service.SPARQLService;
 import org.opensilex.sparql.rdf4j.RDF4JInMemoryService;
+import org.opensilex.unit.test.AbstractUnitTest;
 
 /**
  * @author Renaud COLIN
  * @author Vincent MIGOT
  */
-public class ExperimentDAOTest {
+public class ExperimentDAOTest extends AbstractUnitTest{
 
     private static RDF4JInMemoryService factory;
 
     protected ExperimentDAO xpDao;
-    protected static final String xpGraph = "set/experiments";
+    protected static String xpGraph;
 
     protected ProjectDAO projectDAO;
     protected ProjectModel projectModel;
-    protected static final String projectGraph = "project";
+    protected static String projectGraph;
 
     protected static SPARQLService sparql;
 
@@ -61,6 +63,9 @@ public class ExperimentDAOTest {
         OpenSilex.registerModule(CoreModule.class);
         factory = new RDF4JInMemoryService();
         sparql = factory.provide();
+
+        xpGraph = SPARQLClassObjectMapper.getForClass(ExperimentModel.class).getDefaultGraph().toString();
+        projectGraph = SPARQLClassObjectMapper.getForClass(ProjectModel.class).getDefaultGraph().toString();
     }
 
     @Before
@@ -370,7 +375,7 @@ public class ExperimentDAOTest {
         xpModel.setUri(new URI(xpModel.getUri().toString() + "_suffix"));
         xpDao.update(xpModel);
     }
-    
+
     @Test
     public void delete() throws Exception {
 
